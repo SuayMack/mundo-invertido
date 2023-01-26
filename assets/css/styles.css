@@ -149,11 +149,11 @@ textarea:focus-visible {
 
 header {
   background-color: var(--header-background-color);
-  min-height: 850px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  /*position: relative;*/
 }
 
 header::before {
@@ -171,7 +171,7 @@ header::before {
 
 .header-content {
   max-width: 700px;
-  padding: 80px 20px;
+  padding: 2rem 2rem;
   text-align: center;
   z-index: 2;
 }
