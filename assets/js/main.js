@@ -1,14 +1,17 @@
-function switchTheme() {
-  document.body.classList.toggle('dark-theme');
-  document.body.classList.toggle('light-theme');
+const txtName = document.getElementById('txtName')
+const txtEmail = document.getElementById('txtEmail')
+const txtLevel = document.getElementById('txtLevel')
+const txtCharacter = document.getElementById('txtCharacter')
+const btnSubscribe = document.getElementById('btnSubscribe')
 
-  document.body.setAttribute('aria-label', 'Trocando o tema');
+btnSubscribe.addEventListener('click', () =>{
+  const subscription = {
+    name: txtName.value,
+    email: txtEmail.value ,
+    level: txtLevel.value,
+    character: txtCharacter.value
+  }
+  //Salvar no banco de dados
 
-  const theme = document.body.classList[0];
-  const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
-
-  const audio = document.getElementById('music');
-  audio.src = `assets/musics/${music}`;
-  audio.play();
-  audio.volume = 0.2;
-}
+  console.log(subscription)
+})
